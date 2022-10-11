@@ -60,14 +60,13 @@ let card = '1234123456785678'
 function cardHide(card) {
 let turt = card.slice(-4)
 let boshi = card.slice(0, -4)
-// let res=[]
-// for (let i = 0; i < boshi.length; i++) {
-//   res.push(boshi[i]='*')
+let newArr = boshi.split("")
+let result=""
 
-// }
-let res =boshi.replace(/1/gi, '*')
-return res
-
+for (let i = 0; i < newArr.length; i++) {
+ result += newArr[i]='*'
+}
+return result
 }
 
 let res = cardHide(card)
